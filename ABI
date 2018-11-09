@@ -1,0 +1,159 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "fundPool",
+				"type": "address"
+			}
+		],
+		"name": "endVote",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "candidateAddress",
+				"type": "address"
+			}
+		],
+		"name": "voteForCandidate",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"name": "candidateAddresses",
+				"type": "address[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_candidateList",
+				"type": "address[]"
+			}
+		],
+		"name": "voteStarted",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_voterAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_candidateAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_fundsPledged",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_totalVotesForCandidate",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_totalFundsRaised",
+				"type": "uint256"
+			}
+		],
+		"name": "voteCast",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_winningCandidateAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_winningCandidateVotes",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_fundsToWinner",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_fundsToPool",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_poolAddress",
+				"type": "address"
+			}
+		],
+		"name": "voteEnded",
+		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "candidateList",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "candidate",
+				"type": "address"
+			}
+		],
+		"name": "totalVotesAndFunds",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
